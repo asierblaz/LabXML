@@ -32,5 +32,4 @@
 			<value> SMTP </value>
 			<value> Ninguna es correcta </value>
 		</incorrectResponses>
-	</assessmentItem>
-<assessmentItem subject="FUTBOL" author="email122@ikasle.ehu.eus"><itemBody><p>Quien gano la ultima liga?</p></itemBody><correctResponse><value>barcelona</value></correctResponse><incorrectResponses><value>atletico</value><value>real sociedad</value><value>SEVILLA</value></incorrectResponses></assessmentItem></assessmentItems>
+	</assessmentItems>
