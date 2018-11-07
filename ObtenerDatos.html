@@ -16,7 +16,7 @@
 	<br>
 	<hr>
 	<br>
-<input type="button" id="completar" name="completar" value="completar" onclick="completar()">
+<input type="button" id="completar" name="completar" value="completar">
 </form>   </fieldset>
 
 
@@ -26,41 +26,52 @@
 <script type="text/javascript">
 
 
+
  	$(document).ready(function() {
 		$.get('usuarios.xml', function(d){
+
 		var listacorreos = $(d).find('email');
 		var listanombres = $(d).find('nombre');
 		var listaapellido1 = $(d).find('apellido1');
 		var listaapellido2 = $(d).find('apellido2');
 		var listatelefono = $(d).find('telefono');
-		
+
+			$('#completar').click(function(){
 
 		for (var i = 0; i < listacorreos.length; i++)
 		{
+
+
+
 			$('#lista').append($('<option>',{
 					value: listacorreos[i].childNodes[0].nodeValue,
 					text: listacorreos[i].childNodes[0].nodeValue
 
-			}));
+		}));
+
+	 var email = $('#lista').val();
 
 
-			var email = $('#lista').val();
 			if (email==listacorreos[i].childNodes[0].nodeValue){
+
+
 				var nombre = listanombres[i].childNodes[0].nodeValue;
 				var apellido1 = listaapellido1[i].childNodes[0].nodeValue;
 				var apellido2 = listaapellido2[i].childNodes[0].nodeValue;
 				var telefono = listatelefono[i].childNodes[0].nodeValue;
 
+			
+
 				$("#nombre").val(nombre);
 				$("#apellido1").val(apellido1);
 				$("#apellido2").val(apellido2);
-				$("#telefono").val(telefono);
+				$("#telefono").val(telefono);	
 
 
 			}
 
 		}
-
+	});
 	})
 });
 
