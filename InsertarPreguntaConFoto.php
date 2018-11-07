@@ -164,8 +164,8 @@ $xml-> asXML('preguntas.xml');
 	 }else{ 
 
 	 echo"<html> <br><hrml>Datos guardados correctamente en el XML<br><a href='tVerPreguntasXML.php?mail=$email'>Ver las preguntas almacenadas en el XML</a>";
-	 echo"<html> <br><hrml>Datos guardados correctamente en la bd<br><a href='VerPreguntasConFoto.php?mail=$email'>Ver las preguntas almacenadas en la BD</a>";
-	  echo"<html> <br><hrml>¿Quieres insertar otra pregunta? <br><a href='preguntas.php?mail=$email'>Insertar pregunta</a>";
+	 echo"<html><br> <br><hrml>Datos guardados correctamente en la bd<br><a href='VerPreguntasConFoto.php?mail=$email'>Ver las preguntas almacenadas en la BD</a>";
+	  echo"<html><br> <br><hrml>¿Quieres insertar otra pregunta? <br><a href='preguntas.php?mail=$email'>Insertar pregunta</a>";
 
 
 	 } 
