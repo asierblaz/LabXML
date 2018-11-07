@@ -1,4 +1,6 @@
 <?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="VerPreguntas.xsl"?>
+
 <assessmentItems>
 	<assessmentItem subject="Web" author="jvadillo001@ikasle.ehu.eus">
 		<itemBody>
@@ -31,4 +33,4 @@
 			<value> Ninguna es correcta </value>
 		</incorrectResponses>
 	</assessmentItem>
-<assessmentItem subject="4" author="email123@ikasle.ehu.eus"><itemBody><p>mdmdmdmdmdmd</p></itemBody><correctResponse><value>mdm</value></correctResponse><incorrectResponses><value>m</value><value>m</value><value>m</value></incorrectResponses></assessmentItem></assessmentItems>
+<assessmentItem subject="FUTBOL" author="email122@ikasle.ehu.eus"><itemBody><p>Quien gano la ultima liga?</p></itemBody><correctResponse><value>barcelona</value></correctResponse><incorrectResponses><value>atletico</value><value>real sociedad</value><value>SEVILLA</value></incorrectResponses></assessmentItem></assessmentItems>

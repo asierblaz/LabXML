@@ -97,7 +97,6 @@ echo $imprimir['imagen'];
 <?php 
 $xml= simplexml_load_file('preguntas.xml');
 $cont=0;
-$kaka=1;
 foreach ($xml as $preguntas) {
 $email = $preguntas['author'];
 $enunciado =$xml->assessmentItem[$cont]->itemBody->p;
@@ -108,7 +107,7 @@ $enunciado =$xml->assessmentItem[$cont]->itemBody->p;
 
  ?>
 <tr>
-	<td>&nbsp;&nbsp;<?php echo $cont;?>&nbsp;&nbsp;</td>
+	<td>&nbsp;&nbsp;<?php echo $cont+1;?>&nbsp;&nbsp;</td>
 	<td><br>&nbsp;&nbsp;<?php echo $email;?>&nbsp;&nbsp;<br></td>
 	<td>&nbsp;&nbsp;<?php echo $enunciado; ?>&nbsp;&nbsp;</td>
 	<td>&nbsp;&nbsp;<?php echo $respcorrecta; ?>&nbsp;&nbsp;</td>
