@@ -8,7 +8,7 @@
 <fieldset>
 
 <form id="fpreguntas" name="fpreguntas" method="POST" enctype="multipart/form-data" action="" style="background-color: white; text-align: left;">
-	Email: <SELECT NAME="lista" id="lista" ></SELECT><br><br><br>
+	Email: <SELECT NAME="lista" id="lista"></SELECT><br><br><br>
 	Nombre*: <input type="text" name="nombre" id="nombre" class="entrada"required><br>
 	Primer Apellido*: <input type="text" name="apellido1" id="apellido1" class="entrada"required><br>
 	Segundo Apellido*: <input type="text" name="apellido2" id="apellido2" class="entrada"required><br>
@@ -16,7 +16,6 @@
 	<br>
 	<hr>
 	<br>
-<input type="button" id="completar" name="completar" value="completar">
 </form>   </fieldset>
 
 
@@ -26,20 +25,20 @@
 <script type="text/javascript">
 
 
-
  	$(document).ready(function() {
 		$.get('usuarios.xml', function(d){
 
+	
 		var listacorreos = $(d).find('email');
 		var listanombres = $(d).find('nombre');
 		var listaapellido1 = $(d).find('apellido1');
 		var listaapellido2 = $(d).find('apellido2');
 		var listatelefono = $(d).find('telefono');
-
-			$('#completar').click(function(){
+var enc=false;
 
 		for (var i = 0; i < listacorreos.length; i++)
 		{
+
 
 
 
@@ -49,11 +48,17 @@
 
 		}));
 
-	 var email = $('#lista').val();
+
+
+		}
+				$('#lista').change(function(){
+
+		for (var i = 0; i < listacorreos.length; i++)
+		{
+		 var email = $('#lista').val();
 
 
 			if (email==listacorreos[i].childNodes[0].nodeValue){
-
 
 				var nombre = listanombres[i].childNodes[0].nodeValue;
 				var apellido1 = listaapellido1[i].childNodes[0].nodeValue;
@@ -67,12 +72,16 @@
 				$("#apellido2").val(apellido2);
 				$("#telefono").val(telefono);	
 
+			}}
 
-			}
-
-		}
-	});
+		});
 	})
+
+				$("#nombre").val("");
+				$("#apellido1").val("");
+				$("#apellido2").val("");
+				$("#telefono").val("");	
+
 });
 
 
@@ -84,6 +93,4 @@
 
 </BODY>
 </HTML> 
-
-	
 
